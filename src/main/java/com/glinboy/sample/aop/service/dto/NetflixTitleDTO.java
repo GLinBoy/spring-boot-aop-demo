@@ -1,18 +1,24 @@
 package com.glinboy.sample.aop.service.dto;
 
-public record NetflixTitleDTO(
-		Long id,
-		String showId,
-		String type,
-		String title,
-		String director,
-		String cast,
-		String country,
-		String dateAdded,
-		String releaseYear,
-		String rating,
-		String duration,
-		String listedIn,
-		String description) {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class NetflixTitleDTO {
+	private Long id;
+	private String showId;
+	private String type;
+	private String title;
+	private String director;
+	private String cast;
+	private String country;
+	private String dateAdded;
+	private String releaseYear;
+	private String rating;
+	private String duration;
+	private String listedIn;
+	private String description;
 }
