@@ -1,5 +1,7 @@
 package com.glinboy.sample.aop.web.rest;
 
+import java.util.List;
+
 import org.springdoc.core.converters.models.PageableAsQueryParam;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -26,6 +28,12 @@ public class NetflixTitleResource {
 	@PageableAsQueryParam
 	public ResponseEntity<Page<NetflixTitleDTO>> getNetflixTitles(@Parameter(hidden = true) Pageable pageable) {
 		return ResponseEntity.ok(service.getNetflixTitles(pageable));
+	}
+
+	@GetMapping("/list")
+	@PageableAsQueryParam
+	public ResponseEntity<List<NetflixTitleDTO>> getNetflixTitlesList(@Parameter(hidden = true) Pageable pageable) {
+		return ResponseEntity.ok(service.getNetflixTitlesList(pageable));
 	}
 
 	@GetMapping("/{id}")
