@@ -1,5 +1,6 @@
 package com.glinboy.sample.aop.service.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
@@ -24,6 +25,11 @@ public class NetflixTitleServiceImpl implements NetflixTitleService {
 	public Page<NetflixTitleDTO> getNetflixTitles(Pageable pageable) {
 		return repository.findAll(pageable)
 				.map(e -> mapper.map(e, NetflixTitleDTO.class));
+	}
+
+	@Override
+	public List<NetflixTitleDTO> getNetflixTitlesList(Pageable pageable) {
+		return this.getNetflixTitles(pageable).getContent();
 	}
 
 	@Override
