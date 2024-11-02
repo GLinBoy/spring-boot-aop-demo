@@ -18,8 +18,8 @@ import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/v1/titles")
 @RequiredArgsConstructor
+@RequestMapping("/api/v1/titles")
 public class NetflixTitleResource {
 
 	private final NetflixTitleService service;

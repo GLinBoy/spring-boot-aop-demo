@@ -16,6 +16,7 @@
 	<description>Demo project for Spring Boot to work with AOP</description>
 	<properties>
 		<java.version>23</java.version>
+		<maven.compiler.proc>full</maven.compiler.proc>
 		<editorconfig.version>0.1.3</editorconfig.version>
 		<modelmapper.version>3.2.0</modelmapper.version>
 		<spring-doc.version>2.6.0</spring-doc.version>
